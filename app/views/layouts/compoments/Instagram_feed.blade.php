@@ -11,7 +11,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="instagram-feed">
-                   
+
                 </div>
             </div>
         </div>

@@ -1,6 +1,10 @@
 <?php
+    session_start();
    
+    // var_dump($_SESSION);
     require_once 'env.php';
+    require_once 'helper.php';
+
     // require_once 'app/controllers/KhoaController.php';
     // echo getKhoa();
     require_once 'vendor/autoload.php' ;
