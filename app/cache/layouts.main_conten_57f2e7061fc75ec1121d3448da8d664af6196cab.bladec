@@ -2,8 +2,8 @@
 
 
 <?php $this->startSection('content'); ?>
-<div id="content" class="main-content-wrapper">
- 
+ <div id="content" class="main-content-wrapper">
+
 
  <?php echo $this->runChild('layouts.partials.slide_show_main'); ?>
 
@@ -26,7 +26,7 @@
  <div class="row">
  <div class="col-12">
  <div class="product-tab tab-style-3">
-
+ <?php /* Thanh nav điều hướng danh mục */ ?>
  <?php echo $this->runChild('layouts.products.products_categorye.nav_product_category'); ?>
 
  <div class="tab-content product-tab__content fadeInUp" id="product-tabContent">
@@ -59,7 +59,7 @@
  <?php echo $this->runChild('layouts.compoments.methoud_area'); ?>
  <!-- Method area End Here -->
 
-</div>
+ </div>
 <?php $this->stopSection(); ?>
 
 <?php if (isset($_shouldextend[1])) { echo $this->runChild('layouts.main'); } ?>

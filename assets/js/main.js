@@ -337,6 +337,26 @@
 	        $button.parent().find("input").val(newVal);
 	    });		
 	}
+	function customQantity2(){
+	    $(".quantity_cart").append('<div class="dec qtybutton">-</div><div class="inc qtybutton">+</div>');
+
+	    $(".qtybutton").on("click", function () {
+	        var $button = $(this);
+			var oldValue = $button.parent().find("input").val();
+			var newVal;
+	        if ($button.hasClass("inc")) {
+	            newVal = parseFloat(oldValue) + 1;
+	        } else {
+	            // Don't allow decrementing below zero
+	            if (oldValue > 1) {
+	                newVal = parseFloat(oldValue) - 1;
+	            } else {
+	                newVal = 1;
+	            }
+	        }
+	        $button.parent().find("input").val(newVal);
+	    });		
+	}
 
 
 
@@ -882,6 +902,7 @@
 		elementCarousel();
 		dropdownAnimation();
 		customQantity();
+		customQantity2();
 		expandAction();
 		expandShippingInfo();
 		expandPaymentInfo();

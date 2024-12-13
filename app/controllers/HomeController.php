@@ -15,9 +15,18 @@ class HomeController extends BaseController{
 
     }
     public function index(){
-        return $this->view('layouts.main_conten') ; 
+        $products = $this->home->getAllProduct();
+        // debug($products); 
+        // die ; 
+        return $this->view('layouts.main_conten',compact('products')) ; 
     }
     public function details(){
-        return $this->view('layouts.products.product_detail.detail_main') ; 
+        $id=$_GET['id'];
+
+        $product = $this->home->getByID($id);
+        // debug($product); 
+        // // die ; 
+        // var_dump($product);
+        return $this->view('layouts.products.product_detail.detail_main',compact('product')) ; 
     }
 }
